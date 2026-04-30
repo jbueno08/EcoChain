@@ -1,0 +1,266 @@
+/* =========================
+   RESET GENERAL
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
+}
+
+body{
+    width:100%;
+    background:#ffffff;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header{
+    width:100%;
+    height:95px;
+    background:#ffffff;
+    display:flex;
+    align-items:center;
+    position:relative;
+    z-index:1000;
+
+    box-shadow:
+        0 1px 2px rgba(0,0,0,0.04),
+        0 4px 10px rgba(0,0,0,0.06);
+
+    border-bottom:1px solid rgba(0,0,0,0.04);
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+.container{
+    width:100%;
+    max-width:1880px;
+    margin:auto;
+    padding:0 28px;
+    display:flex;
+    align-items:center;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo-box{
+    width:255px;
+    height:58px;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.logo-box img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+/* =========================
+   MENÚ
+========================= */
+.nav{
+    display:flex;
+    align-items:center;
+    gap:58px;
+    margin-left:55px;
+}
+
+.nav a{
+    position:relative;
+    text-decoration:none;
+    color:#151515;
+    font-size:12px;
+    font-weight:400;
+    line-height:1;
+    white-space:nowrap;
+    padding:38px 0;
+    transition:.3s ease;
+}
+
+.nav a::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:0;
+    width:0;
+    height:3px;
+    background:#6BAF45;
+    transform:translateX(-50%);
+    transition:.35s ease;
+    border-radius:50px;
+}
+
+.nav a:hover::after,
+.nav a.active::after{
+    width:100%;
+}
+
+/* =========================
+   BOTONES
+========================= */
+.actions{
+    margin-left:auto;
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.btn{
+    height:34px;
+    padding:0 18px;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:500;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.btn-real-icon{
+    width:18px;
+    height:18px;
+}
+
+/* LOGIN */ 
+.login{ 
+    background: #ffffff; 
+    color: #2E8B39; 
+    border: 1.5px solid #3E9846; /* borde verde */ 
+    height: 34px; 
+    padding: 0 14px; 
+    border-radius: 8px; }
+
+.login:hover{
+    background:#f7fff7;
+}
+
+/* REGISTER */ 
+.register{ 
+    background:#2F8B36; 
+    color:white; 
+    border:none; 
+    height:34px; 
+    padding:0 14px; 
+    border-radius:8px; }
+
+.register:hover{
+    background:#27752d;
+}
+
+/* =========================
+   HERO (AJUSTADO A FIGMA)
+========================= */
+.hero{
+    padding-top:60px;
+    padding-bottom:40px;
+}
+
+/* IMPORTANTE: romper flex del container solo aquí */
+.hero .container{
+    display:block;
+}
+
+.hero-title{
+    max-width:495px;
+    font-size:36px;
+    font-weight:700;
+    line-height:44px;
+    color:#111;
+
+    margin-left: 55px; /* 👈 mueve a la derecha */
+}
+
+.hero-title span{
+    color:#2F8B36;
+}
+
+/* TEXTO DESCRIPTIVO */
+.hero-text{
+    margin-top: 20px;
+    margin-left: 54px; /* mismo alineado que el título */
+    max-width: 445px;
+    font-size: 16px;
+    color: #676767;
+    line-height: 1.4;
+}
+
+/* BOTONES */
+.hero-buttons{
+    margin-top: 25px;
+    margin-left: 54px;
+    display: flex;
+    gap: 20px;
+}
+
+/* BASE */
+.hero-buttons a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 38px;
+    padding: 0 18px;
+    border-radius: 7px;
+    font-size: 14px;
+    text-decoration: none;
+
+    margin-left: 60px; /* 👈 mueve los botones a la derecha */
+}
+
+/* separa el segundo botón */
+.hero-buttons a + a{
+    margin-left: 40px; /* 👈 espacio entre botones */
+}
+
+/* ICONO VACÍO */
+.hero-buttons .icon{
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+/* BOTÓN VERDE */
+.btn-primary{
+    background: #2E7D32;
+    color: #fff;
+    border: 1px solid #2E7D32;
+}
+
+.btn-primary:hover{
+    background:#256628;
+}
+
+/* BOTÓN BORDE */
+.btn-secondary{
+    background: #fff;
+    color: #2E7D32;
+    border: 1px solid #2E7D32;
+}
+
+.btn-secondary:hover{
+    background:#f4fff4;
+}
+
+.hero{
+    padding-top:60px;
+    padding-bottom:40px;
+
+    background:
+        linear-gradient(
+            to right,
+            #f3f3f3 0%,          /* base similar al gris de tu imagen */
+            #f3f3f3 50%,
+            rgba(243,243,243,0.9) 60%,
+            rgba(243,243,243,0.6) 70%,
+            rgba(243,243,243,0.2) 80%,
+            transparent 90%
+        ),
+        url("img/image\ 10.png") no-repeat right center / 60% auto;
+}

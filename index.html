@@ -1,11 +1,88 @@
-><!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EcoChain</title>
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+
+            <div class="logo-box">
+                <img src="img/logo.png" alt="EcoChain Logo">
+            </div>
+
+            <nav class="nav">
+                <a href="#" class="active">Inicio</a>
+                <a href="#">Cómo Funciona</a>
+                <a href="#">Puntos de recojo</a>
+                <a href="#">Operadores</a>
+                <a href="#">Recursos</a>
+                <a href="#">Nosotros</a>
+                <a href="#">Contacto</a>
+            </nav>
+
+            <div class="actions">
+                <button class="btn login">
+                    <img src="img/user1.png" class="btn-real-icon" alt="">
+                    Iniciar Sesión
+                </button>
+
+                <button class="btn register">
+                    <img src="img/user2.png" class="btn-real-icon" alt="">
+                    Registrarme
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">
+                Trazabilidad transparente para una gestión sostenible de <span>RAEE</span>
+            </h1>
+            <p class="hero-text">
+    Conectamos a las PyMes de Lima Metropolitana con operadores autorizados
+    para asegurar la correcta gestión de residuos de aparatos electrónicos
+    mediante tecnología Blockchain.
+</p>
+
+<div class="hero-buttons">
+    <a href="#" class="btn-primary">
+        <img src="img/image 4.png" class="btn-real-icon" alt="">
+        Registrar RAEE
+    </a>
+
+    <a href="#" class="btn-secondary">
+        <img src="img/Alert circle.png" class="btn-real-icon" alt="">
+        Conocer más
+    </a>
+</div>
+        </div>
+    </section>
+
+    <!-- SCRIPT -->
+    <script>
+        const links = document.querySelectorAll('.nav a');
+
+        links.forEach(link => {
+            link.addEventListener('click', function () {
+                links.forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+
 </body>
 </html>
